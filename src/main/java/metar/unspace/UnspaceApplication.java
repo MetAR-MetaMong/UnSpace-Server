@@ -1,13 +1,13 @@
-package metar.unsapce;
+package metar.unspace;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class UnsapceApplication {
+public class UnspaceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(UnsapceApplication.class, args);
+		SpringApplication.run(UnspaceApplication.class, args);
 	}
 
 }
