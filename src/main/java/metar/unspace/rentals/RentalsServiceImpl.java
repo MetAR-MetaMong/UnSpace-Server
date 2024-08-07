@@ -15,32 +15,28 @@ public class RentalsServiceImpl implements RentalsService {
     @Override
     public List<Rental> findRentByID(RentalDTO.GetRequest dto) {
         LocalDateTime endtime;
-        if(dto.getEndTime().isEmpty()){
+        if (dto.getEndTime().isEmpty()) {
             endtime = LocalDateTime.now();
         } else {
             endtime = dto.getEndTime().get();
         }
-        return rentalsRepository.findByPerson(dto.getId(),dto.getStartTime(), endtime);
+        return rentalsRepository.findByPerson(dto.getId(), dto.getStartTime(), endtime);
     }
 
     @Override
     public List<Rental> findRentByRoom(RentalDTO.GetRequest dto) {
         LocalDateTime endtime;
-        if(dto.getEndTime().isEmpty()){
+        if (dto.getEndTime().isEmpty()) {
             endtime = LocalDateTime.now();
         } else {
             endtime = dto.getEndTime().get();
         }
-        return rentalsRepository.findByRoom(dto.getId(),dto.getStartTime(), endtime);
+        return rentalsRepository.findByRoom(dto.getId(), dto.getStartTime(), endtime);
     }
 
     @Override
     public boolean makeRentals(RentalDTO.PostRequest dto) {
         int check = rentalsRepository.create(dto);
-        if(check == 1) {
-            return true;
-        } else {
-            return false;
-        }
+        return check == 1;
     }
 }
