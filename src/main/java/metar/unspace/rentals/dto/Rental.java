@@ -1,16 +1,17 @@
-package metar.unspace.rentals;
+package metar.unspace.rentals.dto;
 
 import lombok.Getter;
 import lombok.Setter;
+
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
 public class Rental {
     private int id;
-    private int facility_id;
-    private String user_id;
+    private String userId;
     private String facilityName;
-    private String starttime;
-    private String endtime;
+    private LocalDateTime start;
+    private LocalDateTime end;
     private String username;
 }

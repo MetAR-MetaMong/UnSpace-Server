@@ -1,5 +1,6 @@
 package metar.unspace.rentals;
 
+import metar.unspace.rentals.dto.RentalDTO;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -7,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.List;
 
 public interface RentalsController {
+
+     ResponseEntity<Void> ping();
 
      ResponseEntity<List<RentalDTO.Response>> search(
             @RequestParam(name = "user_id", required = false) String userId,

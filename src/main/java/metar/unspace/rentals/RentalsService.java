@@ -1,5 +1,8 @@
 package metar.unspace.rentals;
 
+import metar.unspace.rentals.dto.Rental;
+import metar.unspace.rentals.dto.RentalDTO;
+
 import java.util.List;
 
 public interface RentalsService {

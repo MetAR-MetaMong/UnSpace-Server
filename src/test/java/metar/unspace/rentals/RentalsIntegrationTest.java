@@ -5,6 +5,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 @SpringBootTest
 @Transactional
-public class RentalsTest {
+public class RentalsIntegrationTest {
 
 }
